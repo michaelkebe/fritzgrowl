@@ -12,7 +12,9 @@
   "license": "MIT",
   "author": "Michael Kebe <michael.kebe@gmail.com>",
   "contributors": [],
-  "engines": {},
+  "engines": {
+    "node": "*"
+  },
   "bin": {
     "fritzgrowl" : "./fritzgrowl.js"
   },
