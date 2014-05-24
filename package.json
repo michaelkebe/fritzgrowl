@@ -1,0 +1,23 @@
+{
+  "name": "fritzgrowl",
+  "description": "Creates nice growls from the FRITZ!Box Callmonitor",
+  "version": "0.0.1",
+  "keywords": ["fritzbox", "growl"],
+  "homepage": "https://github.com/michaelkebe/fritzgrowl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michaelkebe/fritzgrowl.git"
+  },
+  "bugs": "https://github.com/michaelkebe/fritzgrowl",
+  "license": "MIT",
+  "author": "Michael Kebe <michael.kebe@gmail.com>",
+  "contributors": [],
+  "engines": {},
+  "bin": {
+    "fritzgrowl" : "./fritzgrowl.js"
+  },
+  "dependencies": {
+    "growl": "1.7.0"
+  }
+}
+
