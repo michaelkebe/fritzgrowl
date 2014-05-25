@@ -5,16 +5,35 @@ var net = require('net');
 var path = require('path');
 var growl = require('growl');
 
-var host = 'fritz.box';
+var argv = require('minimist')(process.argv.slice(2));
+
+var host = argv.s || 'fritz.box';
 var port = 1012;
+
+if (argv.h) {
+  console.log("fritzbox [-s host] [-h]");
+  process.exit(1);
+}
 
 var socket = new net.Socket();
 socket.connect(port, host);
 
-socket.on('data', function (data) {
+socket.on('connect', handleConnect);
+socket.on('data', handleData);
+socket.on('error', handleError);
+
+process.on('SIGINT', closeSocket);
+process.on('SIGTERM', closeSocket);
+process.on('SIGBREAK', closeSocket);
+
+function handleConnect() {
+  console.log('fritzgrowl connected to ' + host);
+}
+
+function handleData(data) {
   var line = data.toString();
   growlCallMonitorMessage(parseCallMonitorLine(line));
-});
+}
 
 function growlCallMonitorMessage(m) {
   growl(textForMessage(), {
@@ -82,9 +101,16 @@ function parseCallMonitorLine(line) {
   return result;
 }
 
-process.on('SIGINT', closeSocket);
-process.on('SIGTERM', closeSocket);
-process.on('SIGBREAK', closeSocket);
+function handleError(err) {
+  console.error('Could not connect to ' +  host);
+  if (err.code === 'ECONNREFUSED') {
+    console.error('Is the CallMonitor enabled?');
+  } else if (err.code === 'ENOTFOUND') {
+    console.error('Host ' + host + ' not found.');
+  } else {
+    throw err;
+  }
+}
 
 function closeSocket() {
   socket.end();

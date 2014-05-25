@@ -19,7 +19,8 @@
     "fritzgrowl" : "./fritzgrowl.js"
   },
   "dependencies": {
-    "growl": "1.7.0"
+    "growl": "1.7.x",
+    "minimist": "0.1.x"
   }
 }
 
