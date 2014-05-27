@@ -7,6 +7,18 @@ fritzgrowl creates nice growls from the FRITZ!Box Callmonitor for
 * Established calls
 * Hang up calls
 
+##Quick Start
+
+Install it with
+
+    $ npm install -g fritzgrowl
+
+Run it with
+
+    $ fritzgrowl
+
+done.
+
 
 ##Requirements
 
