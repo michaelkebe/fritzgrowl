@@ -40,6 +40,15 @@ be specified with
     fritzgrowl -s another.hostname
 
 
+## Changelog
+
+### 0.0.2
+  - added -s option
+
+### 0.0.1
+  - Initial release
+
+
 ##License
 
 MIT
