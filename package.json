@@ -21,6 +21,10 @@
   "dependencies": {
     "growl": "1.7.x",
     "minimist": "0.1.x"
+  },
+  "devDependencies": {
+    "grunt": "0.4.x",
+    "grunt-contrib-jshint": "*"
   }
 }
 
