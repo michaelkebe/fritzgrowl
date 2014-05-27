@@ -2,7 +2,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.initConfig({
     jshint: {
-      all: [ '*.js' ]
+      all: [
+        'Gruntfile.js',
+        'package.json',
+        'src/**/*.js'
+      ]
     }
   });
 

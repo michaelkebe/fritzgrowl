@@ -16,7 +16,7 @@
     "node": "*"
   },
   "bin": {
-    "fritzgrowl" : "./fritzgrowl.js"
+    "fritzgrowl" : "./src/fritzgrowl.js"
   },
   "dependencies": {
     "growl": "1.7.x",
