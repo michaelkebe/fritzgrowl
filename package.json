@@ -1,7 +1,7 @@
 {
   "name": "fritzgrowl",
   "description": "Creates nice growls from the FRITZ!Box Callmonitor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": ["fritzbox", "growl"],
   "homepage": "https://github.com/michaelkebe/fritzgrowl",
   "repository": {

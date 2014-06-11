@@ -42,6 +42,9 @@ be specified with
 
 ## Changelog
 
+### 0.0.3
+  - Human readable durations with [humanize-duration](https://github.com/EvanHahn/HumanizeDuration.js)
+
 ### 0.0.2
   - added -s option
 
