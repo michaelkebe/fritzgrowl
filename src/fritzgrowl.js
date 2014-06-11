@@ -4,6 +4,7 @@
 var net = require('net');
 var path = require('path');
 var growl = require('growl');
+var humanizeDuration = require('humanize-duration');
 
 var argv = require('minimist')(process.argv.slice(2));
 
@@ -63,7 +64,7 @@ function growlCallMonitorMessage(m) {
       case "CONNECT":
         return "";
       case "DISCONNECT":
-        return "Duration: " + m.duration;
+        return "Duration: " + humanizeDuration(m.duration * 1000);
     }
   }
 
