@@ -34,7 +34,7 @@ Here is an example screenshot (Ubuntu):
 
 ## Options
 
-If the FRITZ!Box is not using the default`fritz.box` hostname it can
+If the FRITZ!Box is not using the default `fritz.box` hostname it can
 be specified with
 
     fritzgrowl -s another.hostname
