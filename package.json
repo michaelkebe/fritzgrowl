@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "growl": "1.10.x",
-    "minimist": "0.1.x",
+    "minimist": ">=0.2.1",
     "humanize-duration": "0.8.x"
   },
   "devDependencies": {
